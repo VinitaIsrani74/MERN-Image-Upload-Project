@@ -1,7 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import path from 'path
+import path from 'path'
 // import './db/conn.js'
 import mongoose from "mongoose";
 import router from './routes/router.js';
