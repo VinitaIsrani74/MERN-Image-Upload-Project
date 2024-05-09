@@ -13,7 +13,7 @@ app.use('/', router)
 app.use(cors())
 dotenv.config()
 
-mongoose.connect(process.env.DATABASE)
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("database connected"))
   .catch((err) => console.log(err.message));
 
