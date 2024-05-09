@@ -7,10 +7,10 @@ import router from './routes/router.js';
 
 const app = express()
 
-
+app.use(cors())
 app.use(express.json());
 app.use('/', router)
-app.use(cors())
+
 dotenv.config()
 
 mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
