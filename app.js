@@ -17,7 +17,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopolo
   .then(() => console.log("database connected"))
   .catch((err) => console.log(err.message));
 
-app.use("https://mern-image-upload-project.onrender.com/uploads", express.static("./uploads"))
+app.use("/uploads", express.static("./uploads"))
 app.listen(process.env.PORT, () =>{
     console.log("listening");
 })
